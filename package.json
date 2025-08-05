@@ -1,0 +1,22 @@
+{
+  "name": "api-express-backend",
+  "version": "1.0.0",
+  "description": "- npm init // cria o package.json para iniciar um projeto node\r - npm i nome_pacote // instala um pacote especifico\r - npm install ou npm i // instala todos os pacotes do package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel86767/api-backend-express-2025.git"
+  },
+  "author": "daniel86767",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel86767/api-backend-express-2025/issues"
+  },
+  "homepage": "https://github.com/daniel86767/api-backend-express-2025#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
