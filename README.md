@@ -39,3 +39,12 @@ patch:PATCH é um método HTTP usado para realizar atualizações parciais em um
 
 -como mudar o formato de importação/exportação de require para import
 (adicionar no package.json a propriedade type:"module")
+
+--watch(parametro para rodar um js em modo dev, que permite rodar o script quando algum arquivo é alterado)
+
+sintaxe básica de uma rota da api
+app.post('/produto', (req,res) => {
+    res.json({message:'criado com sucesso!'})
+})
+
+-método:post (post,)
