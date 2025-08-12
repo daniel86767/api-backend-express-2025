@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "- npm init // cria o package.json para iniciar um projeto node\r - npm i nome_pacote // instala um pacote especifico\r - npm install ou npm i // instala todos os pacotes do package.json",
   "main": "scr/server.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,6 @@
   "homepage": "https://github.com/daniel86767/api-backend-express-2025#readme",
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "devDependencies": {}
 }
