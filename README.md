@@ -37,6 +37,8 @@ delete: O método DELETE em APIs REST é usado para remover um recurso específi
 
 patch:PATCH é um método HTTP usado para realizar atualizações parciais em um recurso
 
+-router(para que separar as rotas?
+para organiza rotas)
 -como mudar o formato de importação/exportação de require para import
 (adicionar no package.json a propriedade type:"module")
 
