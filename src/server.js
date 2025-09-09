@@ -1,8 +1,7 @@
 import express from 'express';
-import profileRouter from './profileRouter.js';
-import productRouter from './productRouter.js';
-import supplierRouter from './supplierRouter.js';
-import carRouter from './carRouter.js';
+import profileRouter from './Routers/profileRouter.js';
+import productRouter from './Routers/productRouter.js';
+import supplierRouter from './Routers/supplierRouter.js';
 const app = express();
 const PORT = 3000;
 
@@ -12,7 +11,7 @@ app.use(express.json()); // converte o body para JSON
 app.use('/profile', profileRouter);
 app.use('/products', productRouter);
 app.use('/suppliers', supplierRouter);
-app.use('/car', carRouter);
+
 
 
 

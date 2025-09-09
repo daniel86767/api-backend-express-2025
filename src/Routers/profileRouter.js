@@ -1,26 +1,14 @@
-import express, { Router } from 'express'
-const router = express.Router()
+import express from 'express';
+import { createProfileController } from '../controllers/profile/createProfileController.js';
+import { listProfileController } from '../controllers/profile/ListProfileController.js';
+import { getByIdProfileController } from '../controllers/profile/getByldProfileController.js';
+import { deleteProfileController } from '../controllers/profile/deleteProfileController.js';
 
-router.post('/profile', (req, res) => {
+const router = express.Router();
 
-    res.json({ message: 'perfil  criado com sucesso!' });
-    profile: dados
-  });
+router.post('/profile', createProfileController);
+router.get('/', listProfileController);
+router.get('/profile/:id', getByIdProfileController);
+router.delete('/profile/:id/:name', deleteProfileController);
 
-  router.get('/', (req, res) => {
-    res.json({ message: 'perfil de usuario consultado com sucesso!' });
-  });
-
-router.get('/profile/:id', (req, res) => {
-    const dados = req.body;
-    console.log(dados);
-    res.json({ message: 'perfil editado criado com sucesso!' });
-  });
-
-  router.delete('/profile/:id/:name', (req, res) => {
-    res.json({ message: 'perfil com id{id$} excluido com sucesso' });
-  });
-  
-  export default router;
-
-  
+export default router;
