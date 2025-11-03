@@ -12,12 +12,6 @@
 -git config --global user.name
 -git config --global user.email "renancavichi@gmail.com" 
 
-#proximas aula
-- prisma orm
-- validação de dados (regras de negócio) com zod
-- padrão de projeot middleware
-
-
 # tópicos importantes
 -o que é javascript:JavaScript é uma linguagem de programação usada principalmente para adicionar interatividade a páginas web
 
@@ -25,13 +19,39 @@
 
 -o que é node.js:node é o ambiente ou runtime que faz rodar o javascript no terminal ou servidor 
 
-- o que é o express:Express refere-se ao Express.js, um framework web para Node.js. Ele simplifica o desenvolvimento de aplicativos web e APIs 
+- o que é o express:Express refere-se ao Express.js, um framework para Node.js. Ele simplifica o desenvolvimento de aplicativos web e APIs 
 
-- protocolo httpsHTTPS significa Hypertext Transfer Protocol Secure (Protocolo de Transferência de Hipertexto Seguro). É uma versão segura do HTTP, o protocolo padrão para a comunicação na web, que adiciona uma camada de segurança através da criptografia.
+- protocolo https significa Hypertext Transfer Protocol Secure (Protocolo de Transferência de Hipertexto Seguro). É uma versão segura do HTTP, o protocolo padrão para a comunicação na web, que adiciona uma camada de segurança através da criptografia.
 
 - o que é layout: a composição,a organização dos elementos de um site
 
-# métodos http(get,post,put,patch,delete)
+-o que é npm: NPM significa Node Package Manager (Gerenciador de Pacotes do Node) e é uma ferramenta essencial para desenvolvedores JavaScript, especialmente no desenvolvimento com Node.js. 
+
+quem cria o pacote node_modules = npm i
+
+# como mudar o formato de importação/exportação de require para import
+(adicionar no package.json a propriedade type:"module")
+--watch (parametro ou atalho para rodar um js em modo dev, que permite rodar o script quando algum arquivo é alterado)
+
+-router(para que separar as rotas?
+para organiza rotas efacilita a manutenção do projeto e escabilidade)
+-parâmetro de rota. exemplo: /:id
+
+o que é parametro:diferentes tipos de dados que são passados para funções, para programas da linha de comando, ou como parte de URLs (parâmetros de consulta, parâmetros de caminho) para passar informações ao servidor
+
+sintaxe básica de uma rota da api
+app.post('/produto', (req,res) => {
+    res.json({message:'criado com sucesso!'})
+})
+-método:post (post,)
+
+--o que é modelo de padrão de projeto:é uma forma de escreve código e  codificar que é amplamente conhecido
+
+para que serve o padrão de projeto mvc
+
+qual a responsabilidade das camadas de moelo, visão e controle
+
+ # métodos http(get,post,put,patch,delete)
 get:O método GET em APIs é utilizado para solicitar dados de um recurso específico de um servidor
 
 put:O método PUT em APIs REST é usado para atualizar um recurso existente ou criar um novo recurso, caso ele não exista
@@ -42,24 +62,8 @@ delete: O método DELETE em APIs REST é usado para remover um recurso específi
 
 patch:PATCH é um método HTTP usado para realizar atualizações parciais em um recurso
 
--router(para que separar as rotas?
-para organiza rotas)
-
-# como mudar o formato de importação/exportação de require para import
-(adicionar no package.json a propriedade type:"module")
-
---watch(parametro para rodar um js em modo dev, que permite rodar o script quando algum arquivo é alterado)
-
-sintaxe básica de uma rota da api
-app.post('/produto', (req,res) => {
-    res.json({message:'criado com sucesso!'})
-})
--método:post (post,)
-
 # MVC:MODEL VIEW CONTROIIER(3camada)
 serve para organizar código em três camadas
-
-o que é modelo de padrão de projeto:é uma forma de escreve código e  codificar que é amplamente conhecido
 
 o que fica na camada model(1camada):server para acesso aos banco dados e manipula de regras de negócio
 
@@ -68,7 +72,7 @@ o que fica na camada view(2camada)camada de apresentação visualazação intera
 o que fica na camada controiler(3camada)controla a entrada ,processamento e saída de dados
 
 # prisma
-:é um orm object reistionsi model = modelo de objeto relacional= ferramenta que criar um relacionamento entre o javascript e o banco de dados
+é um orm object reistionsi model = modelo de objeto relacional= ferramenta que criar um relacionamento entre o javascript e o banco de dados
 
 # porque usa um orm?
 facilidade de executar e modificar os comandos no banco de dados
@@ -94,3 +98,8 @@ gerar os arquivo necessarios para usar o prisma client no codigo
 - npx prisma generate
 
 abrir uma versão do banco de dados
+
+# middlware
+- é uma função
+- tudo que tem req e res é uma middlware
+-padrão de projeto middlware usado pelo express que divide o código em funções que são chamadas de middlware execuções

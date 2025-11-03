@@ -1,4 +1,4 @@
-import { create } from "./createProductService.js";
+import { create } from "../../models/profileModel";
 export const createProductController = async (req, res) => {
     const profile = req.body;
     const result = await create(profile);

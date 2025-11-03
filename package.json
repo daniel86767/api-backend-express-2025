@@ -20,6 +20,7 @@
   "homepage": "https://github.com/daniel86767/api-backend-express-2025#readme",
   "dependencies": {
     "@prisma/client": "^6.15.0",
+    "bcrypt": "^6.0.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
