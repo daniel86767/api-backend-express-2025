@@ -1,4 +1,4 @@
-import { getByid } from "../../models/profileModel.js";
+import { getByEmail } from "../../models/profileModel.js";
 export const getByIdProfileController = (req, res) => {
     const dados = req.body;
     console.log(dados);

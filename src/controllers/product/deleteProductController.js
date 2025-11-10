@@ -1,11 +1,16 @@
-import {remove} from "../../models/productModel.js";
-export const deleteProductController = async (req, res) => {
-    const id = req.params.id;
+import { remove } from '../../models/profileModel.js';
 
-    // id vem da url como string precisa converter para number
-    const result = await remove(+id); // +id converte para number ou usar number(id)
+export const deleteProductController = async (req, res) => {
+  const id = Number(req.params.id);
+
+  try {
+    const result = await remove(id);
     res.json({
-        message: `Produto com id ${id} deletado com sucesso!`,
-        product: result
+      message: `Produto com id ${id} deletado com sucesso!`,
+      product: result
     });
-}
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Erro ao deletar produto" });
+  }
+};

@@ -1,4 +1,5 @@
-import { update } from "../../models/profileModel";
+import { update } from "../../models/profileModel.js";
+
 export const editProductController = (req, res) => {
     const id = req.params.id;
     const dados = req.body;

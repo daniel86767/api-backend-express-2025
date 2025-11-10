@@ -103,3 +103,7 @@ abrir uma versão do banco de dados
 - é uma função
 - tudo que tem req e res é uma middlware
 -padrão de projeto middlware usado pelo express que divide o código em funções que são chamadas de middlware execuções
+
+
+
+o que acontece se eu troca o token = quando você troca o token todos perde o acesso no site e vão ter que logar denovo
