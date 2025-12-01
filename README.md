@@ -107,3 +107,25 @@ abrir uma versão do banco de dados
 
 
 o que acontece se eu troca o token = quando você troca o token todos perde o acesso no site e vão ter que logar denovo
+
+# avalição backend 9/12
+autenticação e login de usuários
+-- como salvar a senha do usuário no BD de forma segura? = salvar como hash(bcrypt)
+
+-- autenticação (login), o que verificar e fazer no login? comparar os dados = No login: buscar o usuário no Banco de dados e comparar a senha digitada com o hash salvo  usando bcrypt; se coincidir, autentica, caso contrário, nega o acesso.
+
+- jwt= JWT é um token compacto usado para autenticar usuários, contendo informações assinadas que permitem validar a identidade sem precisar consultar o banco a cada requisição.
+
+-qual o significado de jwt = JSON Web Token.
+
+- quais são  as vantagens do jwt = O payload já vem dentro do token (o backend não precisa consultar o Banco de dados), o token é assinado com o segredo do backend garantindo integridade, e ele é amplamente utilizado e compatível com várias bibliotecas
+
+validação de dados (regra de negócio) com zod
+para que serve o zod = Zod serve para criar regras de validação e garantir que cada campo siga as regras de negócio definidas antes de ser usado na aplicação.
+
+pra que serve o partial do zod? = Zod permite que campos não enviados não sejam validados, tornando todos os campos opcionais.
+
+
+erroHadler(middleware para tratamento de erros de api)
+para que serve o error Haldrer? O Error Handler serve para capturar erros de forma centralizada e facilitar a manutenção, padronizando as respostas de erro da aplicação dar mensagens de erro no servidor manda mensagens amigaveis de erro para o usuário e evitar que o servidor pare(quebre).
+

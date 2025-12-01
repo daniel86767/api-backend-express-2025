@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+
 }
 
 model user {
@@ -20,4 +20,11 @@ model produto {
   nome          String    @db.VarChar(100)
   descricao     String?   @db.Text
   preco         Decimal   @db.Decimal(10, 2)
+}
+
+model profile {
+  id       Int     @id @default(autoincrement())
+  name     String  @db.VarChar(255)
+  email    String  @unique @db.VarChar(255)
+  avatar   String? @db.VarChar(255)
 }

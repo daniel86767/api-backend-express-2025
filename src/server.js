@@ -5,7 +5,8 @@ import supplierRouter from './Routers/supplierRouter.js';
 import { logger } from './generated/middlewares/logger.js';
 import cors from 'cors';
 import productRouter from './Routers/productRouter.js';
-
+import { errorHandler } from './generated/middlewares/errorHandler.js'
+import { notFoundError } from './generated/middlewares/notFoundError.js'
 const app = express();// Cria a aplicação Express
 const PORT = 3000;// Define a porta onde o servidor irá rodar
 
@@ -20,6 +21,10 @@ app.use('/profile', profileRouter);// Usa o profileRouter para rotas que começa
 app.use('/products', productRouter);// Usa o productRouter para rotas que começam com /products
 app.use('/suppliers', supplierRouter);// Usa o supplierRouter para rotas que começam com /suppliers
 app.use('/auth', authRouter); // 
+
+app.use(notFoundError)
+app.use(errorHandler)
+
 
 
 
